@@ -1,57 +1,64 @@
 <template>
-  <div class="card">
-    <!-- left side -->
-    <img src="../../public/images/drawers.jpg" alt="" class="card-img" />
-    <!-- right side -->
-    <div class="card-description">
-      <h1 class="card-description-title">
-        Shift the overall look and feel by adding these wonderful touches to
-        furniture in your home
-      </h1>
-      <p class="card-description-text">
-        Ever been in a room and felt like something was missing ? Perhaps it
-        felt slightly bare and uninviting. I've got some simple tips to help you
-        make any room feel complete.
-      </p>
-      <!-- author box -->
-      <div class="card-description-author">
-        <div class="card-description-author-details-container">
-          <img src="../../public/images/avatar-michelle.jpg" alt="" />
-          <div class="card-description-author-details">
-            <p class="card-description-author-details-name">Michelle Apleton</p>
-            <p class="card-description-author-details-date">28 jun 2020</p>
+  <div class="w-full">
+    <h2 class="text-6xl font-bold text-left pl-6 mb-44">Card Component</h2>
+    <div class="w-full flex flex-col items-center">
+      <div class="card">
+        <!-- left side -->
+        <img src="../../public/images/drawers.jpg" alt="" class="card-img" />
+        <!-- right side -->
+        <div class="card-description">
+          <h1 class="card-description-title">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h1>
+          <p class="card-description-text">
+            Ever been in a room and felt like something was missing ? Perhaps it
+            felt slightly bare and uninviting. I've got some simple tips to help
+            you make any room feel complete.
+          </p>
+          <!-- author box -->
+          <div class="card-description-author">
+            <div class="card-description-author-details-container">
+              <img src="../../public/images/avatar-michelle.jpg" alt="" />
+              <div class="card-description-author-details">
+                <p class="card-description-author-details-name">
+                  Michelle Apleton
+                </p>
+                <p class="card-description-author-details-date">28 jun 2020</p>
+              </div>
+            </div>
+            <!-- share button -->
+            <div
+              class="card-description-author-share-button"
+              v-bind:class="[
+                shareOverlay === true
+                  ? 'card-description-author-share-button--active'
+                  : '',
+              ]"
+              @click="showOverlay"
+            >
+              <!-- Share container -->
+              <div class="share-container" v-if="shareOverlay">
+                <p class="share-container-text">SHARE</p>
+                <img
+                  src="../../public/images/icon-facebook.svg"
+                  alt=""
+                  class="share-container-img"
+                />
+                <img
+                  src="../../public/images/icon-twitter.svg"
+                  alt=""
+                  class="share-container-img"
+                />
+                <img
+                  src="../../public/images/icon-pinterest.svg"
+                  alt=""
+                  class="share-container-img"
+                />
+              </div>
+              <img src="../../public/images/icon-share.svg" alt="" />
+            </div>
           </div>
-        </div>
-        <!-- share button -->
-        <div
-          class="card-description-author-share-button"
-          v-bind:class="[
-            shareOverlay === true
-              ? 'card-description-author-share-button--active'
-              : '',
-          ]"
-          @click="showOverlay"
-        >
-          <!-- Share container -->
-          <div class="share-container" v-if="shareOverlay">
-            <p class="share-container-text">SHARE</p>
-            <img
-              src="../../public/images/icon-facebook.svg"
-              alt=""
-              class="share-container-img"
-            />
-            <img
-              src="../../public/images/icon-twitter.svg"
-              alt=""
-              class="share-container-img"
-            />
-            <img
-              src="../../public/images/icon-pinterest.svg"
-              alt=""
-              class="share-container-img"
-            />
-          </div>
-          <img src="../../public/images/icon-share.svg" alt="" />
         </div>
       </div>
     </div>

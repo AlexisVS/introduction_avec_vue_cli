@@ -2,9 +2,7 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   // mode: 'jit',
-  purge: [
-    './index.html',
-  ],
+  purge: ['./public/**/*.html', './src/**/*.vue'],
   presets: [],
   darkMode: false, // or 'media' or 'class'
   // textSizes: {
@@ -1016,7 +1014,7 @@ module.exports = {
     backgroundBlendMode: ['responsive'],
     backgroundClip: ['responsive'],
     backgroundColor: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
-    backgroundImage: ['responsive'],
+    backgroundImage: ['responsive', 'hover'],
     backgroundOpacity: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],

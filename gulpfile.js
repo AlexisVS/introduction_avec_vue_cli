@@ -11,7 +11,6 @@ const postcssPresetEnv = require('postcss-preset-env');
 
 var cssSetup = () => {
   var sourcefiles = ['./src/css/*.css', './node_modules/tailwindcss/tailwind.css'];
-
   var postcssPlugins = [
     postcssPresetEnv(),
     postcssImport,
