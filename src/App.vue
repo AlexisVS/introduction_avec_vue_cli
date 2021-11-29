@@ -1,16 +1,29 @@
 <template>
   <div id="app">
+
+    <!-- Card -->
+    <section class="min-h-screen flex flex-col justify-center items-center">
     <Card/>
+    </section>
+
+    <!-- Pricing Component -->
+    <section class="min-h-screen flex flex-col justify-center items-center">
+    <Pricing/>
+    </section>
+
+
   </div>
 </template>
 
 <script>
 import Card from "./components/Card.vue"
+import Pricing from './components/Pricing.vue'
 
 export default {
   name: 'App',
   components: {
     Card,
+    Pricing,
   }
 }
 </script>
@@ -23,9 +36,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #edf2f8;
 }
 </style>
