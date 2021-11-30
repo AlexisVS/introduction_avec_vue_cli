@@ -117,11 +117,11 @@
               {{ currentPrice.cardProfessionalPrice }}
           </p>
           <hr class="w-full my-4 bg-white" />
-          <p class="text-sm font-bold">500 GB Storage</p>
+          <p class="text-sm font-bold">1 TB Storage</p>
           <hr class="w-full my-4 bg-white" />
-          <p class="text-sm font-bold">2 Users Allowed</p>
+          <p class="text-sm font-bold">5 Users Allowed</p>
           <hr class="w-full my-4 bg-white" />
-          <p class="text-sm font-bold">Send up to 3 GB</p>
+          <p class="text-sm font-bold">Send up to 10 GB</p>
           <hr class="w-full my-4 bg-white" />
           <button
             class="
@@ -163,11 +163,11 @@
               {{ currentPrice.cardMasterPrice }}
           </p>
           <hr class="w-full my-4" />
-          <p class="text-sm font-bold text-gray-600">500 GB Storage</p>
+          <p class="text-sm font-bold text-gray-600">2 Tb Storage</p>
           <hr class="w-full my-4" />
-          <p class="text-sm font-bold text-gray-600">2 Users Allowed</p>
+          <p class="text-sm font-bold text-gray-600">10 Users Allowed</p>
           <hr class="w-full my-4" />
-          <p class="text-sm font-bold text-gray-600">Send up to 3 GB</p>
+          <p class="text-sm font-bold text-gray-600">Send up to 20 GB</p>
           <hr class="w-full my-4" />
           <button
             class="
@@ -204,8 +204,8 @@ export default {
       toggleButtonState: false,
       currentPrice: {
         cardBasicPrice: "19.99",
-        cardProfessionalPrice: "19.99",
-        cardMasterPrice: "19.99",
+        cardProfessionalPrice: "24.99",
+        cardMasterPrice: "39.99",
       },
       monthly: {
         cardBasic: {
