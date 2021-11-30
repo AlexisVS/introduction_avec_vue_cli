@@ -1139,6 +1139,7 @@ module.exports = {
     zIndex: ['responsive', 'focus-within', 'focus'],
   },
   plugins: [
+    require('@tailwindcss/forms'),
     // require('tailwindcss-fluid')({
     //   suffix: '',
     //   textSizes: true // use the settings defined the core config (above)

@@ -1,31 +1,43 @@
 <template>
   <div id="app">
-
     <!-- Card -->
     <section class="min-h-screen flex flex-col justify-center items-center">
-    <Card/>
+      <Card />
     </section>
 
     <!-- Pricing Component -->
     <section class="min-h-screen flex flex-col justify-center items-center">
-    <Pricing/>
+      <Pricing />
     </section>
 
+    <!-- Signup Form Component -->
+    <section class="min-h-screen flex flex-col justify-center items-center">
+      <SignupForm />
+    </section>
 
+    <!-- Signup Form Component -->
+    <section class="min-h-screen flex flex-col justify-center items-center">
+      <Slider />
+    </section>
+    
   </div>
 </template>
 
 <script>
-import Card from "./components/Card.vue"
-import Pricing from './components/Pricing.vue'
+import Card from "./components/Card.vue";
+import Pricing from "./components/Pricing.vue";
+import SignupForm from "./components/SignupForm.vue";
+import Slider from './components/Slider.vue'
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Card,
     Pricing,
-  }
-}
+    SignupForm,
+    Slider,
+  },
+};
 </script>
 
 <style>
