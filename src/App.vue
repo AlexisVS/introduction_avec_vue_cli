@@ -19,6 +19,11 @@
     <section class="min-h-screen flex flex-col justify-center items-center">
       <Slider />
     </section>
+
+    <!-- PierrePapierCiseaux Component -->
+    <section class="min-h-screen flex flex-col justify-center items-center">
+      <PierrePapierCiseaux />
+    </section>
     
   </div>
 </template>
@@ -27,7 +32,8 @@
 import Card from "./components/Card.vue";
 import Pricing from "./components/Pricing.vue";
 import SignupForm from "./components/SignupForm.vue";
-import Slider from './components/Slider.vue'
+import Slider from './components/Slider.vue';
+import PierrePapierCiseaux from "./components/PierrePapierCiseaux.vue";
 
 export default {
   name: "App",
@@ -36,6 +42,7 @@ export default {
     Pricing,
     SignupForm,
     Slider,
+    PierrePapierCiseaux,
   },
 };
 </script>
