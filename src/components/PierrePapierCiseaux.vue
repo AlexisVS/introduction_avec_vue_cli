@@ -62,7 +62,6 @@
           <img
             :src="robotSelectedFilePath"
             alt
-            @click="robotDisableClick && robotSelectMise()"
             :class="robotSelected !== Number ? 'fill-current hover:text-gray-200 hover:bg-indigo-300' : '' && winner == 'robot' ? 'bg-green-400' : null"
             class="flex items-center justify-center bg-white w-56 h-56 p-5 rounded-full bg-opacity-80"
           />
@@ -90,7 +89,7 @@ import ciseaux from "../assets/images/pierre_papier_ciseaux/icon-scissors.svg";
 import rules from "../assets/images/pierre_papier_ciseaux/image-rules.svg";
 
 export default {
-  data: function () {
+  data () {
     return {
       score: 0,
       userSelected: null,
@@ -116,15 +115,17 @@ export default {
           name: "ciseaux",
           filePath: ciseaux,
         },
-      ]
+      ],
     }
   },
   methods: {
-    userSelectMise: function (miseId) {
-      return this.userSelected = miseId;
+    userSelectMise (miseId) {
+      this.userSelected = miseId;
+      setTimeout(() => {
+        this.robotSelectMise()
+      }, 2000);
     },
-    robotSelectMise: function () {
-      this.robotDisableClick = false;
+    robotSelectMise () {
       this.robotSelected = Math.floor(Math.random() * 3) + 1;
       // Egalité
       if ((this.userSelected == this.robotSelected)
@@ -149,21 +150,25 @@ export default {
         this.winner = "robot"
         this.score--;
       }
+      this.robotSelectMise;
     },
-    resetSettings: function () {
+    resetSettings () {
       this.userSelected = null;
       this.robotSelected = null;
       this.robotDisableClick = true;
       this.launchRestartPanel = null;
       this.winner = null;
     },
-    displayRules: function () {
+    displayRules () {
       this.showRules = !this.showRules;
     },
   },
   computed: {
-    userSelectedFilePath: function () { return this.userSelected !== null && this.mises[this.userSelected - 1].filePath },
-    robotSelectedFilePath: function () { return this.robotSelected !== null && this.mises[this.robotSelected - 1].filePath },
+    userSelectedFilePath () { return this.userSelected !== null && this.mises[this.userSelected - 1].filePath },
+    robotSelectedFilePath () { return this.robotSelected !== null && this.mises[this.robotSelected - 1].filePath },
+  },
+  watch: {
+    robotSelectedFilePath () { return this.robotSelected !== null && this.mises[this.robotSelected - 1].filePath }
   }
 };
 </script>

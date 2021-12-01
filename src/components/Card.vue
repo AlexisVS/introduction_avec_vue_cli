@@ -1,30 +1,21 @@
 <template>
   <div class="w-full">
-    <h2 class="text-6xl font-bold text-left pl-6 mb-44">Card Component</h2>
+    <h2 class="text-6xl font-bold text-left pl-6 mb-16">Card Component</h2>
     <div class="w-full flex flex-col items-center">
-      <div class="card">
+      <div class="card" v-for="card in cards" :key="'card' + card.id">
         <!-- left side -->
-        <img src="../../public/images/drawers.jpg" alt="" class="card-img" />
+        <img src="../assets/images/card/drawers.jpg" alt class="card-img" />
         <!-- right side -->
         <div class="card-description">
-          <h1 class="card-description-title">
-            Shift the overall look and feel by adding these wonderful touches to
-            furniture in your home
-          </h1>
-          <p class="card-description-text">
-            Ever been in a room and felt like something was missing ? Perhaps it
-            felt slightly bare and uninviting. I've got some simple tips to help
-            you make any room feel complete.
-          </p>
+          <h1 class="card-description-title">{{ card.title }}</h1>
+          <p class="card-description-text">{{ card.description }}</p>
           <!-- author box -->
           <div class="card-description-author">
             <div class="card-description-author-details-container">
-              <img src="../../public/images/avatar-michelle.jpg" alt="" />
+              <img src="../assets/images/card/avatar-michelle.jpg" alt />
               <div class="card-description-author-details">
-                <p class="card-description-author-details-name">
-                  Michelle Apleton
-                </p>
-                <p class="card-description-author-details-date">28 jun 2020</p>
+                <p class="card-description-author-details-name">{{ card.authorName }}</p>
+                <p class="card-description-author-details-date">{{ card.date }}</p>
               </div>
             </div>
             <!-- share button -->
@@ -40,23 +31,11 @@
               <!-- Share container -->
               <div class="share-container" v-if="shareOverlay">
                 <p class="share-container-text">SHARE</p>
-                <img
-                  src="../../public/images/icon-facebook.svg"
-                  alt=""
-                  class="share-container-img"
-                />
-                <img
-                  src="../../public/images/icon-twitter.svg"
-                  alt=""
-                  class="share-container-img"
-                />
-                <img
-                  src="../../public/images/icon-pinterest.svg"
-                  alt=""
-                  class="share-container-img"
-                />
+                <img src="../assets/images/card/icon-facebook.svg" alt class="share-container-img" />
+                <img src="../assets/images/card/icon-twitter.svg" alt class="share-container-img" />
+                <img src="../assets/images/card/icon-pinterest.svg" alt class="share-container-img" />
               </div>
-              <img src="../../public/images/icon-share.svg" alt="" />
+              <img src="../assets/images/card/icon-share.svg" alt />
             </div>
           </div>
         </div>
@@ -66,10 +45,42 @@
 </template>
 
 <script>
+import imgageProfile from '../assets/images/card/avatar-michelle.jpg';
+import imageCard from '../assets/images/card/drawers.jpg';
+
 export default {
   name: "Card",
   data: function () {
     return {
+      cards: [
+        {
+          id: 1,
+          imageCard: imageCard,
+          title: "Shift the overall look and feel by adding these wonderful touches to furniture in your home ",
+          description: "Ever been in a room and felt like something was missing ? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.",
+          imageProfile: imgageProfile,
+          authorName: 'Junior Apleton',
+          date: '28 jun 2020',
+        },
+        {
+          id: 1,
+          imageCard: imageCard,
+          title: "Bonjour je m'apelle alexis ",
+          description: "Ever been in a room and felt like something was missing ? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.",
+          imageProfile: imgageProfile,
+          authorName: 'Alexis Apleton',
+          date: '28 jun 2021',
+        },
+        // {
+        //   id: 1,
+        //   imageCard: imageCard,
+        //   title: "Hey alexis comment ça va",
+        //   description: "Ever been in a room and felt like something was missing ? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.",
+        //   imageProfile: imgageProfile,
+        //   authorName: 'Kevin Apleton',
+        //   date: '28 jun 2022',
+        // },
+      ],
       shareOverlay: false,
     };
   },
@@ -87,6 +98,7 @@ export default {
   width: 768px;
   height: 250px;
   border-radius: 12px;
+  margin: 1rem 0;
 }
 
 .card-img {

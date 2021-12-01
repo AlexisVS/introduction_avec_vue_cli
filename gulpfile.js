@@ -1,11 +1,9 @@
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
-const autoPrefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const cssnano = require('gulp-cssnano');
 const tailwindcss = require('tailwindcss');
 const postcssImport = require('postcss-import');
-const autoprefixer = require('autoprefixer');
 const concat = require('gulp-concat');
 const postcssPresetEnv = require('postcss-preset-env');
 

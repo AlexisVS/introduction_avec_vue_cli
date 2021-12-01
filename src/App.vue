@@ -30,7 +30,7 @@
 
 <script>
 import Card from "./components/Card.vue";
-import Pricing from "./components/Pricing.vue";
+import Pricing from "./components/pricing/Pricing.vue";
 import SignupForm from "./components/SignupForm.vue";
 import Slider from './components/Slider.vue';
 import PierrePapierCiseaux from "./components/PierrePapierCiseaux.vue";
