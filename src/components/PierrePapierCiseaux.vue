@@ -8,8 +8,8 @@
     <!-- <img src="../../public/images/pierre_papier_ciseaux/image-rules-bonus.svg" alt=""> -->
 
     <!-- <img src="../../public/images/pierre_papier_ciseaux/logo-bonus.svg" alt=""> -->
-    <div class="h-160 w-full">
-      <div class="w-full h-full flex flex-col justify-between items-center mt-14">
+    <div class="h-112 w-full">
+      <div class="w-full h-full relative flex flex-col justify-between items-center">
         <!-- /* -------------------------------------------------------------------------- */
       /*                                  Controls                                  */
         /* -------------------------------------------------------------------------- */-->
@@ -73,11 +73,11 @@
           <img :src="rulesImg" alt />
         </div>
         <!-- Button RUles -->
+      </div>
         <button
           @click="displayRules()"
-          class="px-7 w-max uppercase text-sm py-2 font-bold tracking-wider border rounded-lg self-end mr-9 mb-8"
+          class="px-7 w-max uppercase text-sm py-2 font-bold tracking-wider border rounded-lg absolute right-8 mb-8"
         >Rules</button>
-      </div>
     </div>
   </div>
 </template>
