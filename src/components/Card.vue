@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full min-h-screen">
     <h2 class="text-6xl font-bold text-left pl-6 mb-16">Card Component</h2>
     <div class="w-full flex flex-col items-center">
       <div class="card" v-for="card in cards" :key="'card' + card.id">

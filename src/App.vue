@@ -1,51 +1,22 @@
 <template>
   <div id="app">
-    <!-- Card -->
-    <section class="min-h-screen flex flex-col justify-center items-center">
-      <Card />
-    </section>
+    <!-- <div id="nav">
+      <router-link to="/about">About</router-link>
+    </div> -->
+    <div class="w-full bg-gray-900 py-4">
+      <div class="w-lg mx-auto flex items-center justify-evenly font-bold uppercase  text-gray-400">
+        
 
-    <!-- Pricing Component -->
-    <section class="min-h-screen flex flex-col justify-center items-center">
-      <Pricing />
-    </section>
-
-    <!-- Signup Form Component -->
-    <section class="min-h-screen flex flex-col justify-center items-center">
-      <SignupForm />
-    </section>
-
-    <!-- Signup Form Component -->
-    <section class="min-h-screen flex flex-col justify-center items-center">
-      <Slider />
-    </section>
-
-    <!-- PierrePapierCiseaux Component -->
-    <section class="min-h-screen flex flex-col justify-center items-center">
-      <PierrePapierCiseaux />
-    </section>
-    
+      <router-link class="hover:text-white transition duration-700" to="/">Card</router-link>
+      <router-link class="hover:text-white transition duration-700" to="/signup-form">signup-form</router-link>
+      <router-link class="hover:text-white transition duration-700" to="/pricing">pricing</router-link>
+      <router-link class="hover:text-white transition duration-700" to="/slider">slider</router-link>
+      <router-link class="hover:text-white transition duration-700" to="/pierre-papier-ciseaux">pierre-papier-ciseaux</router-link>
+      </div>
+    </div>
+    <router-view/>
   </div>
 </template>
-
-<script>
-import Card from "./components/Card.vue";
-import Pricing from "./components/pricing/Pricing.vue";
-import SignupForm from "./components/SignupForm.vue";
-import Slider from './components/Slider.vue';
-import PierrePapierCiseaux from "./components/PierrePapierCiseaux.vue";
-
-export default {
-  name: "App",
-  components: {
-    Card,
-    Pricing,
-    SignupForm,
-    Slider,
-    PierrePapierCiseaux,
-  },
-};
-</script>
 
 <style>
 #app {
@@ -54,7 +25,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  min-height: 100vh;
-  background-color: #edf2f8;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
